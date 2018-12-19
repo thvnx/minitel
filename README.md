@@ -15,6 +15,7 @@
 ```sh
 cp systemd/serial-getty-minitel@.service /etc/systemd/system/
 ln -s /etc/systemd/system/serial-getty-minitel@.service /etc/systemd/system/getty.target.wants/serial-getty-minitel@ttyUSB0.service
+systemctl daemon-reload
 systemctl start serial-getty-minitel@ttyUSB0.service
 ```
 
@@ -24,3 +25,7 @@ systemctl start serial-getty-minitel@ttyUSB0.service
 cp minicom/minirc.minitel /etc/
 minicom minitel
 ```
+
+## references
+
+[Pila's Blog (french)](http://pila.fr/wordpress/?p=361)
